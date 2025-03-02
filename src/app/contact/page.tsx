@@ -33,7 +33,7 @@ export default function ContactPage() {
     
     try {
       // Send data to your email endpoint
-      const response = await fetch('http://localhost:5000/send-email', {
+      const response = await fetch('https://chirammal.vercel.app/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
