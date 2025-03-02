@@ -125,17 +125,9 @@ export default function ContactPage() {
         {/* Mobile Navigation Menu */}
         {mobileMenuOpen && (
           <div className="fixed inset-0 z-50 bg-black bg-opacity-75">
-            <div className="fixed top-0 right-0 w-full max-w-xs h-full bg-white p-6 overflow-y-auto">
+            <div className="fixed top-0 right-0 w-full max-w-[16rem] h-full bg-white p-6 overflow-y-auto">
               <div className="flex items-center justify-between mb-8">
-                <div className="relative w-[200px] h-[50px]">
-                  <Image 
-                    src="/images/chirammel_construction.png"
-                    alt="Logo"
-                    width={350}
-                    height={100}
-                    className="object-contain"
-                  />
-                </div>
+               
                 <button
                   type="button"
                   className="text-gray-500 hover:text-yellow-500"
@@ -145,19 +137,19 @@ export default function ContactPage() {
                 </button>
               </div>
               <nav className="flex flex-col space-y-6">
-                <Link href="/" className="text-blue-700 hover:text-yellow-500 font-medium text-lg" onClick={() => setMobileMenuOpen(false)}>
+                <Link href="/" className="block py-2 text-blue-700 hover:text-yellow-500 font-medium text-lg" onClick={() => setMobileMenuOpen(false)}>
                   Home
                 </Link>
-                <Link href="/about" className="text-blue-700 hover:text-yellow-500 font-medium text-lg" onClick={() => setMobileMenuOpen(false)}>
+                <Link href="/about" className="block py-2 text-blue-700 hover:text-yellow-500 font-medium text-lg" onClick={() => setMobileMenuOpen(false)}>
                   About Us
                 </Link>
-                <Link href="/gallery" className="text-blue-700 hover:text-yellow-500 font-medium text-lg" onClick={() => setMobileMenuOpen(false)}>
+                <Link href="/gallery" className="block py-2 text-blue-700 hover:text-yellow-500 font-medium text-lg" onClick={() => setMobileMenuOpen(false)}>
                   Gallery
                 </Link>
-                <Link href="/services" className="text-blue-700 hover:text-yellow-500 font-medium text-lg" onClick={() => setMobileMenuOpen(false)}>
+                <Link href="/services" className="block py-2 text-blue-700 hover:text-yellow-500 font-medium text-lg" onClick={() => setMobileMenuOpen(false)}>
                   Services
                 </Link>
-                <Link href="/contact" className="text-blue-700 hover:text-yellow-500 font-medium text-lg" onClick={() => setMobileMenuOpen(false)}>
+                <Link href="/contact" className="block py-2 text-blue-700 hover:text-yellow-500 font-medium text-lg" onClick={() => setMobileMenuOpen(false)}>
                   Contact
                 </Link>
               </nav>

@@ -13,7 +13,7 @@ interface Service {
 // WhatsApp Button Component
 const WhatsAppButton = () => {
   const phoneNumber = "919895466438";
-  const message = "Hello! I&apos;m interested in your construction services.";
+  const message = "Hello! Im interested in your construction services.";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   return (
@@ -124,17 +124,9 @@ export default function Home() {
         {/* Mobile Navigation Menu */}
         {mobileMenuOpen && (
           <div className="fixed inset-0 z-50 bg-black bg-opacity-75">
-            <div className="fixed top-0 right-0 w-full max-w-xs h-full bg-white p-6 overflow-y-auto">
+            <div className="fixed top-0 right-0 w-full max-w-[16rem] h-full bg-white p-6 overflow-y-auto">
               <div className="flex items-center justify-between mb-8">
-                <div className="relative w-[200px] h-[50px]">
-                  <Image 
-                    src="/images/chirammel_construction.png"
-                    alt="Logo"
-                    width={350}
-                    height={100}
-                    className="object-contain"
-                  />
-                </div>
+                
                 <button
                   type="button"
                   className="text-gray-500 hover:text-yellow-500"
@@ -144,19 +136,19 @@ export default function Home() {
                 </button>
               </div>
               <nav className="flex flex-col space-y-6">
-                <Link href="/" className="text-blue-700 hover:text-yellow-500 font-medium text-lg" onClick={() => setMobileMenuOpen(false)}>
+                <Link href="/" className="block py-2 text-blue-700 hover:text-yellow-500 font-medium text-lg" onClick={() => setMobileMenuOpen(false)}>
                   Home
                 </Link>
-                <Link href="/about" className="text-blue-700 hover:text-yellow-500 font-medium text-lg" onClick={() => setMobileMenuOpen(false)}>
+                <Link href="/about" className="block py-2 text-blue-700 hover:text-yellow-500 font-medium text-lg" onClick={() => setMobileMenuOpen(false)}>
                   About Us
                 </Link>
-                <Link href="/gallery" className="text-blue-700 hover:text-yellow-500 font-medium text-lg" onClick={() => setMobileMenuOpen(false)}>
+                <Link href="/gallery" className="block py-2 text-blue-700 hover:text-yellow-500 font-medium text-lg" onClick={() => setMobileMenuOpen(false)}>
                   Gallery
                 </Link>
-                <Link href="/services" className="text-blue-700 hover:text-yellow-500 font-medium text-lg" onClick={() => setMobileMenuOpen(false)}>
+                <Link href="/services" className="block py-2 text-blue-700 hover:text-yellow-500 font-medium text-lg" onClick={() => setMobileMenuOpen(false)}>
                   Services
                 </Link>
-                <Link href="/contact" className="text-blue-700 hover:text-yellow-500 font-medium text-lg" onClick={() => setMobileMenuOpen(false)}>
+                <Link href="/contact" className="block py-2 text-blue-700 hover:text-yellow-500 font-medium text-lg" onClick={() => setMobileMenuOpen(false)}>
                   Contact
                 </Link>
               </nav>
@@ -165,41 +157,46 @@ export default function Home() {
         )}
       </header>
 
-      {/* Hero Section */}
-      <section className="relative h-screen w-full pt-16 sm:pt-20">
-        <div className="absolute inset-0">
-          <Image 
-            src="/images/home.jpg" 
-            alt="Construction site" 
-            layout="fill"
-            objectFit="cover"
-            quality={100}
-            priority
-          />
-          <div className="absolute inset-0 bg-black opacity-50"></div>
+    {/* Hero Section */}
+<section className="relative h-screen w-full pt-16 sm:pt-20">
+  <div className="absolute inset-0">
+    {/* Parent container for the image */}
+    <div className="relative w-full h-full">
+      <Image 
+        src="/images/home.jpg" 
+        alt="Construction site" 
+        fill
+        className="object-cover"
+        quality={100}
+        priority
+      />
+    </div>
+    {/* Overlay */}
+    <div className="absolute inset-0 bg-black opacity-50"></div>
+  </div>
+  {/* Content */}
+  <div className="relative h-full flex items-center px-4 sm:px-6 lg:px-8 w-full">
+    <div className="text-white w-full max-w-lg mx-auto sm:mx-0 sm:max-w-xl">
+      <h1 className="text-5xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-center sm:text-left">
+        Building Tomorrow&apos;s World Today
+      </h1>
+      <p className="text-lg sm:text-xl md:text-2xl mb-8 sm:mb-8 text-center sm:text-left">
+        Excellence in Construction Since 1990
+      </p>
+      <div className="flex flex-col sm:flex-row gap-4 sm:gap-4">
+        <Link
+          href="/contact"
+          className="bg-yellow-500 text-black px-6 py-3 rounded-md font-semibold hover:bg-yellow-400 transition duration-300 text-center h-[46px] flex items-center justify-center w-auto max-w-[200px] mx-auto sm:w-auto sm:max-w-none sm:mx-0"
+        >
+          Get Started
+        </Link>
+        <div className="w-auto max-w-[300px] mx-auto sm:w-auto sm:max-w-none sm:mx-0">
+          <DownloadBrochureButton />
         </div>
-        <div className="relative h-full flex items-center px-4 sm:px-6 lg:px-8 w-full">
-          <div className="text-white w-full max-w-lg mx-auto sm:mx-0 sm:max-w-xl">
-            <h1 className="text-5xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-center sm:text-left">
-              Building Tomorrow&apos;s World Today
-            </h1>
-            <p className="text-lg sm:text-xl md:text-2xl mb-8 sm:mb-8 text-center sm:text-left">
-              Excellence in Construction Since 1990
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-4">
-              <Link
-                href="/contact"
-                className="bg-yellow-500 text-black px-6 py-3 rounded-md font-semibold hover:bg-yellow-400 transition duration-300 text-center h-[46px] flex items-center justify-center w-auto max-w-[200px] mx-auto sm:w-auto sm:max-w-none sm:mx-0"
-              >
-                Get Started
-              </Link>
-              <div className="w-auto max-w-[300px] mx-auto sm:w-auto sm:max-w-none sm:mx-0">
-                <DownloadBrochureButton />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
       
       {/* Happy Customers - Modified for better responsiveness */}
       <div className="absolute right-9 transform -translate-y-1/2 bg-yellow-500 text-white px-8 py-6 md:px-8 md:py-6 sm:px-6 sm:py-4 rounded-lg shadow-lg text-center w-[300px] md:w-[300px] sm:w-[220px] max-w-full">

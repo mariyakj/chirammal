@@ -2,18 +2,13 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
 import { Building2, PaintBucket, Ruler, HardHat, Home, Factory, Trophy, Users, Clock, CheckCircle, X, Menu } from 'lucide-react';
 
 export default function ServicesPage() {
-  const router = useRouter();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   // Function to handle navigation
-  const handleNavigation = (path: string) => {
-    setMobileMenuOpen(false);
-    router.push(path);
-  };
+
 
   return (
     <>
@@ -26,7 +21,7 @@ export default function ServicesPage() {
                 src="/images/chirammel_construction.png"
                 alt="Chirammel Construction Logo"
                 width={350}
-                height={100}
+                height={50}
                 className="object-contain"
                 priority
               />
@@ -65,62 +60,58 @@ export default function ServicesPage() {
         </div>
 
         {/* Mobile Navigation Menu */}
-        {mobileMenuOpen && (
-          <div className="fixed inset-0 z-50 bg-black bg-opacity-75">
-            <div className="fixed top-0 right-0 w-full max-w-xs h-full bg-white p-4 overflow-y-auto">
-              <div className="flex items-center justify-between mb-8">
-                <div className="relative w-[200px] h-[50px]">
-                  <Image 
-                    src="/images/chirammel_construction.png"
-                    alt="Logo"
-                    width={350}
-                    height={100}
-                    className="object-contain"
-                  />
-                </div>
-                <button
-                  type="button"
-                  className="text-gray-500 hover:text-yellow-500"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  <X className="h-6 w-6" />
-                </button>
-              </div>
-              <nav className="flex flex-col space-y-6">
-                <button 
-                  onClick={() => handleNavigation('/')}
-                  className="text-left text-blue-700 hover:text-yellow-500 font-medium text-lg"
-                >
-                  Home
-                </button>
-                <button 
-                  onClick={() => handleNavigation('/about')}
-                  className="text-left text-blue-700 hover:text-yellow-500 font-medium text-lg"
-                >
-                  About Us
-                </button>
-                <button 
-                  onClick={() => handleNavigation('/gallery')}
-                  className="text-left text-blue-700 hover:text-yellow-500 font-medium text-lg"
-                >
-                  Gallery
-                </button>
-                <button 
-                  onClick={() => handleNavigation('/services')}
-                  className="text-left text-blue-700 hover:text-yellow-500 font-medium text-lg"
-                >
-                  Services
-                </button>
-                <button 
-                  onClick={() => handleNavigation('/contact')}
-                  className="text-left text-blue-700 hover:text-yellow-500 font-medium text-lg"
-                >
-                  Contact
-                </button>
-              </nav>
-            </div>
-          </div>
-        )}
+{mobileMenuOpen && (
+  <div className="fixed inset-0 z-50 bg-black bg-opacity-75">
+    <div className="fixed top-0 right-0 w-full max-w-[16rem] h-full bg-white p-6 overflow-y-auto">
+      <div className="flex items-center justify-between mb-8">
+        <button
+          type="button"
+          className="text-gray-500 hover:text-yellow-500"
+          onClick={() => setMobileMenuOpen(false)}
+        >
+          <X className="h-6 w-6" />
+        </button>
+      </div>
+      <nav className="flex flex-col space-y-6">
+        <Link 
+          href="/" 
+          className="block py-2 text-blue-700 hover:text-yellow-500 font-medium text-lg"
+          onClick={() => setMobileMenuOpen(false)}
+        >
+          Home
+        </Link>
+        <Link
+          href="/about" 
+          className="block py-2 text-blue-700 hover:text-yellow-500 font-medium text-lg"
+          onClick={() => setMobileMenuOpen(false)}
+        >
+          About Us
+        </Link>
+        <Link 
+          href="/gallery" 
+          className="block py-2 text-blue-700 hover:text-yellow-500 font-medium text-lg"
+          onClick={() => setMobileMenuOpen(false)}
+        >
+          Gallery
+        </Link>
+        <Link 
+          href="/services" 
+          className="block py-2 text-blue-700 hover:text-yellow-500 font-medium text-lg"
+          onClick={() => setMobileMenuOpen(false)}
+        >
+          Services
+        </Link>
+        <Link   
+          href="/contact" 
+          className="block py-2 text-blue-700 hover:text-yellow-500 font-medium text-lg"
+          onClick={() => setMobileMenuOpen(false)}
+        >
+          Contact
+        </Link>
+      </nav>
+    </div>
+  </div>
+)}
       </header>
 
       <main className="pt-20 bg-gray-50">
@@ -150,7 +141,7 @@ export default function ServicesPage() {
         {/* Why Choose Us Section */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4">
-            <h2 className="text-4xl font-bold text-center mb-16">Why Choose Chirammel Constructions?</h2>
+            <h2 className="text-4xl font-bold text-center mb-16 text-black">Why Choose Chirammel Constructions?</h2>
             <div className="grid md:grid-cols-4 gap-8">
               {[
                 {

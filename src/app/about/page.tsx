@@ -56,17 +56,9 @@ export default function AboutPage() {
         {/* Mobile Navigation Menu */}
         {mobileMenuOpen && (
           <div className="fixed inset-0 z-50 bg-black bg-opacity-75">
-            <div className="fixed top-0 right-0 w-full max-w-xs h-full bg-white p-6 overflow-y-auto">
+           <div className="fixed top-0 right-0 w-full max-w-[16rem] h-full bg-white p-6 overflow-y-auto">
               <div className="flex items-center justify-between mb-8">
-                <div className="relative w-[200px] h-[50px]">
-                  <Image 
-                    src="/images/chirammel_construction.png"
-                    alt="Logo"
-                    width={350}
-                    height={100}
-                    className="object-contain"
-                  />
-                </div>
+               
                 <button
                   type="button"
                   className="text-gray-500 hover:text-yellow-500"
@@ -78,35 +70,35 @@ export default function AboutPage() {
               <nav className="flex flex-col space-y-6">
                 <Link 
                   href="/" 
-                  className="text-blue-700 hover:text-yellow-500 font-medium text-lg"
+                  className="block py-2 text-blue-700 hover:text-yellow-500 font-medium text-lg"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Home
                 </Link>
                 <Link 
                   href="/about" 
-                  className="text-blue-700 hover:text-yellow-500 font-medium text-lg"
+                  className="block py-2 text-blue-700 hover:text-yellow-500 font-medium text-lg"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   About Us
                 </Link>
                 <Link 
                   href="/gallery" 
-                  className="text-blue-700 hover:text-yellow-500 font-medium text-lg"
+                  className="block py-2 text-blue-700 hover:text-yellow-500 font-medium text-lg"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Gallery
                 </Link>
                 <Link 
                   href="/services" 
-                  className="text-blue-700 hover:text-yellow-500 font-medium text-lg"
+                  className="block py-2 text-blue-700 hover:text-yellow-500 font-medium text-lg"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Services
                 </Link>
                 <Link 
                   href="/contact" 
-                  className="text-blue-700 hover:text-yellow-500 font-medium text-lg"
+                  className="block py-2 text-blue-700 hover:text-yellow-500 font-medium text-lg"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Contact
@@ -142,27 +134,28 @@ export default function AboutPage() {
       </section>
 
       {/* Our Story Section */}
-      <section className="max-w-7xl mx-auto px-4 py-16">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <h2 className="text-3xl font-bold text-gray-900">Our Story</h2>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Founded in 1990, Chirammel Construction has grown from a small family business into one of the region&apos;s most trusted construction companies. Our journey has been built on the foundations of integrity, quality, and innovation.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              What sets us apart is our unwavering commitment to excellence and our ability to adapt to changing industry demands while maintaining our core values of quality craftsmanship and customer satisfaction.
-            </p>
-          </div>
-          <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
-            <Image 
-              src="/images/modern_home_design (2).jpg" 
-              alt="Company history" 
-              fill 
-              className="object-cover"
-            />
-          </div>
-        </div>
-      </section>
+<section className="max-w-7xl mx-auto px-4 py-16">
+  <div className="grid md:grid-cols-2 gap-12 items-center">
+    <div className="space-y-6">
+      <h2 className="text-3xl font-bold text-gray-900">Our Story</h2>
+      <p className="text-lg text-gray-700 leading-relaxed">
+        Founded in 1990, Chirammel Construction has grown from a small family business into one of the region&apos;s most trusted construction companies. Our journey has been built on the foundations of integrity, quality, and innovation.
+      </p>
+      <p className="text-lg text-gray-700 leading-relaxed">
+        What sets us apart is our unwavering commitment to excellence and our ability to adapt to changing industry demands while maintaining our core values of quality craftsmanship and customer satisfaction.
+      </p>
+    </div>
+    {/* Responsive Image Container */}
+    <div className="relative h-[200px] sm:h-[300px] md:h-[400px] rounded-lg overflow-hidden shadow-xl">
+      <Image 
+        src="/images/modern_home_design (2).jpg" 
+        alt="Company history" 
+        fill 
+        className="object-cover"
+      />
+    </div>
+  </div>
+</section>
 
       {/* Values Section */}
       <section className="bg-gray-50 py-16">
