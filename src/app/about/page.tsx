@@ -4,13 +4,8 @@ import Link from 'next/link';
 import { X, Menu } from 'lucide-react';
 import { useState } from 'react';
 
-
 export default function AboutPage() {
-  const [isOpen, setIsOpen] = useState(false); // Added missing state for mobile menu
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
 
   return (
     <main className="min-h-screen bg-white">
@@ -22,8 +17,8 @@ export default function AboutPage() {
               <Image 
                 src="/images/chirammel_construction.png"
                 alt="Chirammel Construction Logo"
-                width={350}  // Increase width
-                height={100} // Increase height
+                width={350}
+                height={100}
                 className="object-contain"
                 priority
               />
@@ -46,79 +41,82 @@ export default function AboutPage() {
             </nav>
 
             {/* Mobile menu button */}
-                        <div className="md:hidden">
-                          <button
-                            type="button"
-                            className="text-gray-800 hover:text-yellow-500 focus:outline-none"
-                            onClick={() => setMobileMenuOpen(true)}
-                          >
-                            <Menu className="h-6 w-6" />
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-            
-                    {/* Mobile Navigation Menu */}
-                    {mobileMenuOpen && (
-                      <div className="fixed inset-0 z-50 bg-black bg-opacity-75">
-                        <div className="fixed top-0 right-0 w-full max-w-xs h-full bg-white p-6 overflow-y-auto">
-                          <div className="flex items-center justify-between mb-8">
-                            <div className="relative w-[200px] h-[50px]">
-                              <Image 
-                                src="/images/chirammel_construction.png"
-                                alt="Logo"
-                                width={350}
-                                height={100}
-                                className="object-contain"
-                              />
-                            </div>
-                            <button
-                              type="button"
-                              className="text-gray-500 hover:text-yellow-500"
-                              onClick={() => setMobileMenuOpen(false)}
-                            >
-                              <X className="h-6 w-6" />
-                            </button>
-                          </div>
-                          <nav className="flex flex-col space-y-6">
-                            <a 
-                              href="/" 
-                              className="text-blue-700 hover:text-yellow-500 font-medium text-lg"
-                            >
-                              Home
-                            </a>
-                            <a 
-                              href="/about" 
-                              className="text-blue-700 hover:text-yellow-500 font-medium text-lg"
-                            >
-                              About Us
-                            </a>
-                            <a 
-                              href="/gallery" 
-                              className="text-blue-700 hover:text-yellow-500 font-medium text-lg"
-                            >
-                              Gallery
-                            </a>
-                            <a 
-                              href="/services" 
-                              className="text-blue-700 hover:text-yellow-500 font-medium text-lg"
-                            >
-                              Services
-                            </a>
-                            <a 
-                              href="/contact" 
-                              className="text-blue-700 hover:text-yellow-500 font-medium text-lg"
-                            >
-                              Contact
-                            </a>
-                          </nav>
-                        </div>
-                      </div>
-                    )}
-        
+            <div className="md:hidden">
+              <button
+                type="button"
+                className="text-gray-800 hover:text-yellow-500 focus:outline-none"
+                onClick={() => setMobileMenuOpen(true)}
+              >
+                <Menu className="h-6 w-6" />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile Navigation Menu */}
+        {mobileMenuOpen && (
+          <div className="fixed inset-0 z-50 bg-black bg-opacity-75">
+            <div className="fixed top-0 right-0 w-full max-w-xs h-full bg-white p-6 overflow-y-auto">
+              <div className="flex items-center justify-between mb-8">
+                <div className="relative w-[200px] h-[50px]">
+                  <Image 
+                    src="/images/chirammel_construction.png"
+                    alt="Logo"
+                    width={350}
+                    height={100}
+                    className="object-contain"
+                  />
+                </div>
+                <button
+                  type="button"
+                  className="text-gray-500 hover:text-yellow-500"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  <X className="h-6 w-6" />
+                </button>
+              </div>
+              <nav className="flex flex-col space-y-6">
+                <Link 
+                  href="/" 
+                  className="text-blue-700 hover:text-yellow-500 font-medium text-lg"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Home
+                </Link>
+                <Link 
+                  href="/about" 
+                  className="text-blue-700 hover:text-yellow-500 font-medium text-lg"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  About Us
+                </Link>
+                <Link 
+                  href="/gallery" 
+                  className="text-blue-700 hover:text-yellow-500 font-medium text-lg"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Gallery
+                </Link>
+                <Link 
+                  href="/services" 
+                  className="text-blue-700 hover:text-yellow-500 font-medium text-lg"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Services
+                </Link>
+                <Link 
+                  href="/contact" 
+                  className="text-blue-700 hover:text-yellow-500 font-medium text-lg"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Contact
+                </Link>
+              </nav>
+            </div>
+          </div>
+        )}
       </header>
       
-        
       {/* Hero Section */}
       <section className="relative h-[70vh] mb-45">
         <div className="absolute inset-0">
@@ -149,7 +147,7 @@ export default function AboutPage() {
           <div className="space-y-6">
             <h2 className="text-3xl font-bold text-gray-900">Our Story</h2>
             <p className="text-lg text-gray-700 leading-relaxed">
-              Founded in 1990, Chirammel Construction has grown from a small family business into one of the region's most trusted construction companies. Our journey has been built on the foundations of integrity, quality, and innovation.
+              Founded in 1990, Chirammel Construction has grown from a small family business into one of the region&apos;s most trusted construction companies. Our journey has been built on the foundations of integrity, quality, and innovation.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
               What sets us apart is our unwavering commitment to excellence and our ability to adapt to changing industry demands while maintaining our core values of quality craftsmanship and customer satisfaction.
@@ -212,55 +210,21 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Team Section 
-      <section className="py-16 max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">Our Leadership Team</h2>
-        <div className="grid md:grid-cols-3 gap-8">
-          {[
-            {
-              name: "John Doe",
-              position: "CEO & Founder",
-              image: "/images/team-1.jpg"
-            },
-            {
-              name: "Jane Smith",
-              position: "Chief Architect",
-              image: "/images/team-2.jpg"
-            },
-            {
-              name: "Mike Johnson",
-              position: "Project Director",
-              image: "/images/team-3.jpg"
-            }
-          ].map((member, index) => (
-            <div key={index} className="text-center">
-              <div className="relative w-48 h-48 mx-auto mb-4 rounded-full overflow-hidden">
-                <Image 
-                  src={member.image}
-                  alt={member.name}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
-              <p className="text-gray-600">{member.position}</p>
-            </div>
-          ))}
-        </div>
-      </section>*/}
-
       {/* Call to Action */}
       <section className="bg-yellow-500 py-16">
         <div className="max-w-4xl mx-auto text-center px-4">
           <h2 className="text-3xl font-bold text-black mb-6">Ready to Start Your Project?</h2>
           <p className="text-black/80 text-xl mb-8">
-            Let's work together to bring your construction vision to life.
+            Let&apos;s work together to bring your construction vision to life.
           </p>
-          <a href="/contact" className="inline-block bg-black text-white px-8 py-3 rounded-md font-semibold hover:bg-gray-800 transition duration-300">
+          <Link 
+            href="/contact" 
+            className="inline-block bg-black text-white px-8 py-3 rounded-md font-semibold hover:bg-gray-800 transition duration-300"
+          >
             Contact Us Today
-          </a>
+          </Link>
         </div>
       </section>
     </main>
-  )
+  );
 }

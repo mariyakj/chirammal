@@ -64,7 +64,7 @@ export default function ContactPage() {
           isError: true
         });
       }
-    } catch (error) {
+    } catch {
       // Network or other error occurred
       setSubmitStatus({
         message: 'An error occurred. Please check your connection and try again.',
@@ -182,7 +182,7 @@ export default function ContactPage() {
           <div className="relative h-full flex items-center justify-center text-center">
             <div className="max-w-4xl mx-auto px-4">
               <h1 className="text-5xl font-bold text-white mb-6">Get in Touch</h1>
-              <p className="text-xl text-white">We're here to turn your construction dreams into reality</p>
+              <p className="text-xl text-white">We&apos;re here to turn your construction dreams into reality</p>
             </div>
           </div>
         </section>
@@ -379,7 +379,7 @@ export default function ContactPage() {
           <div className="max-w-4xl mx-auto text-center px-4">
             <h2 className="text-3xl font-bold text-black mb-6">Ready to Start Your Project?</h2>
             <p className="text-black/80 text-xl mb-8">
-              Contact us today and let's discuss how we can bring your vision to life.
+              Contact us today and let&apos;s discuss how we can bring your vision to life.
             </p>
             <button className="inline-block bg-black text-white px-8 py-3 rounded-md font-semibold hover:bg-gray-800 transition duration-300">
               Schedule a Consultation

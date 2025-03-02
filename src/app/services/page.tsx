@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { Hammer, Building2, PaintBucket, Ruler, HardHat, Home, Factory, Trophy, Users, Clock, CheckCircle, X, Menu } from 'lucide-react';
+import { Building2, PaintBucket, Ruler, HardHat, Home, Factory, Trophy, Users, Clock, CheckCircle, X, Menu } from 'lucide-react';
 
 export default function ServicesPage() {
   const router = useRouter();
@@ -297,7 +297,7 @@ export default function ServicesPage() {
               Ready to Start Your Construction Project?
             </h2>
             <p className="text-black/80 text-xl mb-8">
-              Let's bring your vision to life with our expert construction services.
+              Let&apos;s bring your vision to life with our expert construction services.
             </p>
             <Link 
               href="/contact" 

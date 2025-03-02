@@ -120,36 +120,41 @@ export default function Gallery() {
                 </button>
               </div>
               <nav className="flex flex-col space-y-6">
-                <a 
+                <Link 
                   href="/" 
                   className="text-blue-700 hover:text-yellow-500 font-medium text-lg"
+                  onClick={() => setMobileMenuOpen(false)}
                 >
                   Home
-                </a>
-                <a 
+                </Link>
+                <Link
                   href="/about" 
                   className="text-blue-700 hover:text-yellow-500 font-medium text-lg"
+                  onClick={() => setMobileMenuOpen(false)}
                 >
                   About Us
-                </a>
-                <a 
+                </Link>
+                <Link 
                   href="/gallery" 
                   className="text-blue-700 hover:text-yellow-500 font-medium text-lg"
+                  onClick={() => setMobileMenuOpen(false)}
                 >
                   Gallery
-                </a>
-                <a 
+                </Link>
+                <Link 
                   href="/services" 
                   className="text-blue-700 hover:text-yellow-500 font-medium text-lg"
+                  onClick={() => setMobileMenuOpen(false)}
                 >
                   Services
-                </a>
-                <a 
+                </Link>
+                <Link 
                   href="/contact" 
                   className="text-blue-700 hover:text-yellow-500 font-medium text-lg"
+                  onClick={() => setMobileMenuOpen(false)}
                 >
                   Contact
-                </a>
+                </Link>
               </nav>
             </div>
           </div>

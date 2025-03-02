@@ -29,7 +29,7 @@ const DownloadBrochureButton = () => {
       setIsError(false);
       setShowNotification(true);
       setTimeout(() => setShowNotification(false), 3000);
-    } catch (error) {
+    } catch {
       setNotificationMessage('Failed to download brochure. Please try again later.');
       setIsError(true);
       setShowNotification(true);

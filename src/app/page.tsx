@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import { MessageCircle, X, Menu } from 'lucide-react'
-import DownloadBrochureButton from '../components/DownloadBrochureButton';
+import DownloadBrochureButton from '@/components/DownloadBrochureButton'
 import Link from 'next/link';
 
 interface Service {
@@ -13,7 +13,7 @@ interface Service {
 // WhatsApp Button Component
 const WhatsAppButton = () => {
   const phoneNumber = "919895466438";
-  const message = "Hello! I'm interested in your construction services.";
+  const message = "Hello! I&apos;m interested in your construction services.";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   return (
@@ -61,11 +61,6 @@ const services: Service[] = [
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [isOpen, setIsOpen] = useState(false)
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen)
-  }
 
   return (
     <main className="min-h-screen">
@@ -87,30 +82,30 @@ export default function Home() {
             
             {/* Desktop Navigation */}
             <nav className="hidden md:flex space-x-8">
-              <a 
+              <Link 
                 href="/about"
                 className="text-blue-700 hover:text-yellow-500 text-base font-medium transition duration-300"
               >
                 About Us
-              </a>
-              <a 
+              </Link>
+              <Link 
                 href="/gallery"
                 className="text-blue-700 hover:text-yellow-500 text-base font-medium transition duration-300"
               >
                 Gallery
-              </a>
-              <a 
+              </Link>
+              <Link 
                 href="/services"
                 className="text-blue-700 hover:text-yellow-500 text-base font-medium transition duration-300"
               >
                 Services
-              </a>
-              <a 
+              </Link>
+              <Link 
                 href="/contact"
                 className="text-blue-700 hover:text-yellow-500 text-base font-medium transition duration-300"
               >
                 Contact Us
-              </a>
+              </Link>
             </nav>
 
             {/* Mobile menu button */}
@@ -186,18 +181,18 @@ export default function Home() {
         <div className="relative h-full flex items-center px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-white w-full max-w-lg mx-auto sm:mx-0 sm:max-w-xl">
             <h1 className="text-5xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-center sm:text-left">
-              Building Tomorrow's World Today
+              Building Tomorrow&apos;s World Today
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl mb-8 sm:mb-8 text-center sm:text-left">
               Excellence in Construction Since 1990
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-4">
-              <a
+              <Link
                 href="/contact"
                 className="bg-yellow-500 text-black px-6 py-3 rounded-md font-semibold hover:bg-yellow-400 transition duration-300 text-center h-[46px] flex items-center justify-center w-auto max-w-[200px] mx-auto sm:w-auto sm:max-w-none sm:mx-0"
               >
                 Get Started
-              </a>
+              </Link>
               <div className="w-auto max-w-[300px] mx-auto sm:w-auto sm:max-w-none sm:mx-0">
                 <DownloadBrochureButton />
               </div>
@@ -276,17 +271,17 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-black mb-8">Ready to Start Your Project?</h2>
           <p className="text-black/80 text-xl mb-8 max-w-2xl mx-auto">
-            Let's turn your vision into reality. Contact us today for a free consultation.
+            Let&apos;s turn your vision into reality. Contact us today for a free consultation.
           </p>
           <div className="space-x-4 flex flex-wrap justify-center gap-4">
-            <a
+            <Link
               href="/contact"
               className="inline-block bg-black text-white px-8 py-3 rounded-md font-semibold hover:bg-gray-800 transition duration-300"
             >
               Contact Us
-            </a>
+            </Link>
             <a
-              href="https://wa.me/919895466438?text=Hello!%20I'm%20interested%20in%20your%20construction%20services."
+              href="https://wa.me/919895466438?text=Hello!%20I&apos;m%20interested%20in%20your%20construction%20services."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center bg-green-500 text-white px-8 py-3 rounded-md font-semibold hover:bg-green-600 transition duration-300"
