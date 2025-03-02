@@ -54,6 +54,4 @@ app.post('/send-email', async (req, res) => {
 
 // Start Server
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-console.log('Received data:', req.body);
-console.log('EMAIL_USER:', process.env.EMAIL_USER);
-console.log('EMAIL_PASS:', process.env.EMAIL_PASS);
+
