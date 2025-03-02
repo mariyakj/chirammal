@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import { MessageCircle, X, Menu } from 'lucide-react'
-import DownloadBrochureButton from '@/components/DownloadBrochureButton'
+import DownloadBrochureButton from '../components/DownloadBrochureButton';
 import Link from 'next/link';
 
 interface Service {
@@ -199,7 +199,7 @@ export default function Home() {
                 Get Started
               </a>
               <div className="w-auto max-w-[300px] mx-auto sm:w-auto sm:max-w-none sm:mx-0">
-                <DownloadBrochureButton className="h-[46px]" />
+                <DownloadBrochureButton />
               </div>
             </div>
           </div>
