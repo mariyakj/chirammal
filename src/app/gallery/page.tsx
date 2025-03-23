@@ -19,6 +19,20 @@ const galleryImages: GalleryImage[] = [
   { id: 4, src: "/images/Kk.jpg", alt: "Home Renovation", category: "Renovation", description: "Complete home transformation project" },
   { id: 5, src: "/images/ss.jpg", alt: "Sustainable Building", category: "Sustainable", description: "Eco-friendly construction with solar integration" },
   { id: 6, src: "/images/modern_home_design (2).jpg", alt: "Luxury Apartment", category: "Residential", description: "High-end apartment complex with modern amenities" },
+  { id: 7, src: "/images/edi16.jpeg", alt: "Modern House Project", category: "Residential", description: "Contemporary luxury home with sustainable features" },
+  { id: 8, src: "/images/edi15.jpeg", alt: "Modern House Project", category: "Residential", description: "Contemporary luxury home with sustainable features" },
+  { id: 9, src: "/images/edi14.jpeg", alt: "Modern House Project", category: "Residential", description: "Contemporary luxury home with sustainable features" },
+  { id: 10, src: "/images/edi12.jpeg", alt: "Modern House Project", category: "Residential", description: "Contemporary luxury home with sustainable features" },
+  { id: 11, src: "/images/edi8.jpeg", alt: "Modern House Project", category: "Residential", description: "Contemporary luxury home with sustainable features" },
+  { id: 12, src: "/images/edi7.jpeg", alt: "Modern House Project", category: "Residential", description: "Contemporary luxury home with sustainable features" },
+  { id: 13, src: "/images/edi5.jpeg", alt: "Modern House Project", category: "Residential", description: "Contemporary luxury home with sustainable features" },
+  { id: 14, src: "/images/edi4.jpeg", alt: "Modern House Project", category: "Residential", description: "Contemporary luxury home with sustainable features" },
+  { id: 15, src: "/images/.jpg", alt: "Modern Interior Design", category: "Interior", description: "Minimalist interior design for urban living" },
+  { id: 16, src: "/images/edi1.jpeg", alt: "Modern Interior Design", category: "Interior", description: "Minimalist interior design for urban living" },
+  { id: 17, src: "/images/edi2.jpeg", alt: "Modern Interior Design", category: "Interior", description: "Minimalist interior design for urban living" },
+  { id: 18, src: "/images/edi3.jpeg", alt: "Modern Interior Design", category: "Interior", description: "Minimalist interior design for urban living" },
+  { id: 19, src: "/images/edi9.jpeg", alt: "Modern Interior Design", category: "Interior", description: "Minimalist interior design for urban living" },
+  { id: 20, src: "/images/edi13.jpeg", alt: "Modern Interior Design", category: "Interior", description: "Minimalist interior design for urban living" },
 ];
 
 const categories = ["All", "Residential", "Commercial", "Interior", "Renovation", "Sustainable"];
