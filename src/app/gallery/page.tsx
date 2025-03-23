@@ -27,7 +27,7 @@ const galleryImages: GalleryImage[] = [
   { id: 12, src: "/images/edi7.jpeg", alt: "Modern House Project", category: "Residential", description: "Contemporary luxury home with sustainable features" },
   { id: 13, src: "/images/edi5.jpeg", alt: "Modern House Project", category: "Residential", description: "Contemporary luxury home with sustainable features" },
   { id: 14, src: "/images/edi4.jpeg", alt: "Modern House Project", category: "Residential", description: "Contemporary luxury home with sustainable features" },
-  { id: 15, src: "/images/.jpg", alt: "Modern Interior Design", category: "Interior", description: "Minimalist interior design for urban living" },
+  { id: 15, src: "/images/edi6.jpeg", alt: "Modern Interior Design", category: "Interior", description: "Minimalist interior design for urban living" },
   { id: 16, src: "/images/edi1.jpeg", alt: "Modern Interior Design", category: "Interior", description: "Minimalist interior design for urban living" },
   { id: 17, src: "/images/edi2.jpeg", alt: "Modern Interior Design", category: "Interior", description: "Minimalist interior design for urban living" },
   { id: 18, src: "/images/edi3.jpeg", alt: "Modern Interior Design", category: "Interior", description: "Minimalist interior design for urban living" },
