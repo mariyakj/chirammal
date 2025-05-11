@@ -34,6 +34,7 @@ const WhatsAppButton = () => {
 };
 
 const services: Service[] = [
+  
   {
     title: 'Commercial Construction',
     description: 'State-of-the-art commercial buildings and office spaces built to your specifications, focusing on functionality and modern design.'

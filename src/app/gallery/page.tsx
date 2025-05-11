@@ -33,9 +33,11 @@ const galleryImages: GalleryImage[] = [
   { id: 18, src: "/images/edi3.jpeg", alt: "Modern Interior Design", category: "Interior", description: "Minimalist interior design for urban living" },
   { id: 19, src: "/images/edi9.jpeg", alt: "Modern Interior Design", category: "Interior", description: "Minimalist interior design for urban living" },
   { id: 20, src: "/images/edi13.jpeg", alt: "Modern Interior Design", category: "Interior", description: "Minimalist interior design for urban living" },
+  { id: 21, src: "/images/edi17.jpeg", alt: "Ongoing Project", category: "Ongoing", description: "Ongoing construction project showcasing our latest work"},
+  { id: 22, src: "/images/edi18.jpeg", alt: "Ongoing Project", category: "Ongoing", description: "Ongoing construction project showcasing our latest work"},
 ];
 
-const categories = ["All", "Residential", "Commercial", "Interior", "Renovation", "Sustainable"];
+const categories = ["All", "Residential", "Commercial", "Interior", "Renovation", "Sustainable","Ongoing"];
 
 export default function Gallery() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -188,16 +190,33 @@ export default function Gallery() {
         </div>
 
         {/* Gallery Grid */}
+        
         <div className="max-w-7xl mx-auto px-6 mb-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredImages.map(image => (
-            <div key={image.id} className="group relative bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer" onClick={() => setSelectedImage(image)}>
+            <div 
+                key={image.id} 
+                className="group relative bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer" 
+                onClick={() => setSelectedImage(image)}
+              >
               <div className="relative h-64 w-full">
-                <Image src={image.src} alt={image.alt} fill className="object-cover transition-transform duration-300 group-hover:scale-105" />
+                <Image 
+                  src={image.src} 
+                  alt={image.alt} 
+                  fill 
+                  className="object-cover transition-transform duration-300 group-hover:scale-105" 
+                />
+                {image.category === 'Ongoing' && (
+                  <div className="absolute top-4 right-4 bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                    Ongoing
+                  </div>
+                )}
               </div>
               <div className="p-4">
                 <h3 className="text-lg font-semibold text-gray-900 mb-1">{image.alt}</h3>
                 <p className="text-gray-600">{image.description}</p>
-                <span className="inline-block mt-2 px-3 py-1 bg-gray-100 text-sm text-gray-600 rounded-full">{image.category}</span>
+                <span className="inline-block mt-2 px-3 py-1 bg-gray-100 text-sm text-gray-600 rounded-full">
+                  {image.category}
+                </span>
               </div>
             </div>
           ))}
